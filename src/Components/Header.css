@@ -22,6 +22,9 @@ nav button{
 
 .logo img{
   height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
 .buttons {
@@ -60,7 +63,17 @@ nav button{
   align-items: center;
 }
 
-@media all and (max-width: 1440px) {
+.icons .list-icon {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+@media all and (min-width: 1280px) and (max-width: 1440px) {
   nav {
     height: 5.5vw;
   }
@@ -75,6 +88,34 @@ nav button{
   .buttons button{
     font-size: 1vw;
     padding: 0.4vw;
+  }
+}
+
+@media all and (max-width: 1279px) {
+  nav {
+    height: 56px;
+  }
+
+  .logo {
+    height: 56px;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+
+  .buttons {
+    display: none;
+  }
+
+  .icons {
+    height: 56px;
+    width: 150px;
+  }
+
+  .icons .list-icon {
+    display: flex;
+    margin-right: 12px;
   }
 }
 

@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import "./Header.css";
 import svgLogo from "./logo/Samsung-Logo.wine.svg";
 import cart from "./icons/cart.svg";
 import person from "./icons/person.svg";
 import search from "./icons/search.svg";
+import list from "./icons/list.svg";
+import Dropdown from "./Dropdown";
 
 function Header() {
+  const [open, setOpen] = useState(false);
+  const mobileView = useMediaQuery({ query: `(max-width: 1279px)` });
+
+  useEffect(() => {
+    if (mobileView === false){
+      setOpen(false)
+    }
+  }, [mobileView])
+  
+
   return (
     <nav>
       <div className="logo">
@@ -30,7 +43,7 @@ function Header() {
           <button>For Business</button>
         </div>
       </div>
-      <div className="icons">
+      <div className={open ? "hide" :"icons"}>
         <div>
           <button>
             <img src={search} alt="search-icon" />
@@ -46,7 +59,21 @@ function Header() {
             <img src={person} alt="account-icon" />
           </button>
         </div>
+        {mobileView && (
+          <>
+            <div className="list-icon">
+              <button
+                onClick={() => {
+                  setOpen(true);
+                }}
+              >
+                <img src={list} alt="list-icon" />
+              </button>
+            </div>
+          </>
+        )}
       </div>
+      {open && <Dropdown setOpen={setOpen}/>}
     </nav>
   );
 }

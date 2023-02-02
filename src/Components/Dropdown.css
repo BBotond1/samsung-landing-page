@@ -1,0 +1,140 @@
+.dropdown-menu {
+  width: 360px;
+  height: 100%;
+  position: fixed;
+  border: 1px solid black;
+  top: 1px;
+  right: 1px;
+  background-color: rgb(255, 255, 255);
+  overflow-y: auto;
+  z-index: 2;
+  font-size: 16px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 8px 16px;
+}
+
+.search-button {
+  width: 280px;
+  height: 40px;
+  background-color: #f7f7f7;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.search-button img {
+  padding-left: 10px;
+}
+
+.close-button {
+  width: 40px;
+  height: 40px;
+}
+
+.sign-button {
+  width: 100%;
+  padding: 16px 0px 32px;
+  position: relative;
+}
+
+.sign-button ::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  right: 24px;
+  bottom: 16px;
+  left: 24px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.sign-button button {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  width: 100%;
+  height: 44px;
+  padding: 0px 24px;
+}
+
+.menu-list {
+  width: 100%;
+}
+
+.menu-list li button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  padding-right: 35px;
+  padding-left: 24px;
+  font-size: 16px;
+}
+
+.support-container {
+  width: 100%;
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.support-container ::before {
+  content: " ";
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.support-container button {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  padding-right: 35px;
+  padding-left: 24px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.order-container{
+  width: 100%;
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.order-container ::before {
+  content: " ";
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.order-container button{
+  width: 100%;
+  height: 44px;
+  display: flex;
+  padding-right: 35px;
+  padding-left: 24px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
