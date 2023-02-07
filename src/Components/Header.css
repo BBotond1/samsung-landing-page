@@ -53,7 +53,7 @@ nav button{
   height: 80px;
   width: 10%;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .icons div {

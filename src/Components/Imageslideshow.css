@@ -1,0 +1,239 @@
+.swiper {
+  width: 95%;
+  height: 40vw;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.053);
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+}
+
+/* .swiper-slide img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+
+
+.swiper-slide img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-prev {
+  background-image: url("icons/left-arrow-white.png");
+  height: 30px !important;
+  opacity: 0.5;
+}
+
+.swiper-button-prev:hover {
+  opacity: 1;
+}
+
+.swiper-button-next {
+  background-image: url("icons/right-arrow-white.png");
+  height: 30px !important;
+  opacity: 0.5;
+}
+
+.swiper-button-next:hover {
+  opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  background-color: white !important;
+}
+
+.samsung-phones-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 5%;
+  left: 3%;
+  color: white;
+}
+
+.samsung-phones-text .title {
+  font-size: 2.5vw;
+}
+
+.samsung-phones-text .order-button {
+  margin-top: 2.2vw;
+  background-color: white;
+  border-radius: 25px;
+  width: 9.5vw;
+  height: 3vw;
+  font-size: 1.2vw;
+}
+
+.order-button:hover {
+  cursor: pointer;
+  background-color: rgb(216, 216, 216);
+}
+
+.samsung-washing-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 12%;
+  left: 38.3%;
+  color: white;
+}
+
+.samsung-washing-text .title {
+  font-size: 3vw;
+  text-shadow: 1px 1px 4px #00000061;
+}
+
+.samsung-washing-text .buy-button {
+  margin-top: 2.2vw;
+  background-color: white;
+  border-radius: 25px;
+  width: 8.5vw;
+  height: 3vw;
+  font-size: 1.2vw;
+}
+
+.buy-button:hover {
+  cursor: pointer;
+  background-color: rgb(216, 216, 216);
+}
+
+.samsung-TV-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 10%;
+  left: 26%;
+  color: white;
+}
+
+.samsung-TV-text .title {
+  font-size: 3.5vw;
+}
+
+.samsung-TV-text .register-button {
+  margin-top: 2.2vw;
+  background-color: white;
+  border-radius: 25px;
+  width: 9.5vw;
+  height: 3vw;
+  font-size: 1.2vw;
+}
+
+.register-button:hover {
+  cursor: pointer;
+  background-color: rgb(216, 216, 216);
+}
+
+@media all and (max-width: 535px) {
+  .swiper {
+    width: 100%;
+    height: 150vw;
+  }
+  .swiper-slide {
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: 88%;
+  }
+
+  .samsung-phones-text{
+    top: 1%;
+    left: 8%;
+  }
+
+  .samsung-phones-text .title {
+    font-size: 9vw;
+  }
+
+  .samsung-phones-text .order-button {
+    margin-top: 5.2vw;
+    background-color: white;
+    border-radius: 38px;
+    width: 29vw;
+    height: 11vw;
+    font-size: 3.6vw;
+  }
+
+  .samsung-TV-text {
+    top: 62%;
+    left: 18.5%;
+  }
+
+  .samsung-TV-text .title {
+    font-size: 8vw;
+  }
+
+  .samsung-TV-text .register-button {
+    margin-top: 5.2vw;
+    background-color: white;
+    border-radius: 38px;
+    width: 29vw;
+    height: 11vw;
+    font-size: 3.6vw;
+  }
+
+  .swiper-slide .tv-image {
+    height: 56%;
+    align-self: flex-start;
+  }
+
+
+  .samsung-washing-text {
+    top: 5%;
+    left: 20.5%;
+  }
+
+  .samsung-washing-text .title {
+    font-size: 8vw;
+  }
+
+  .samsung-washing-text .buy-button {
+    margin-top: 5.2vw;
+    background-color: white;
+    border-radius: 38px;
+    width: 27vw;
+    height: 11vw;
+    font-size: 3.6vw;
+  }
+
+  .swiper-slide .washing-image {
+    height: 69%;
+    align-self: flex-end;
+  }
+  
+
+}
