@@ -32,7 +32,7 @@ function Imageslideshow() {
         modules={[EffectFade, Navigation, Pagination]}
         loop
         speed={500}
-        className="mySwiper"
+        className="slideshow-swiper"
       >
         <SwiperSlide>
           <img src={mobileView ? samsungMView : samsung} alt="samsung s23 series" />
