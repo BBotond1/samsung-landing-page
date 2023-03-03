@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./LatestDealsShowcase.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -39,8 +39,13 @@ import laptopBottomRight from "./img/LatestDealsShowcase/Laptops&Monitors/SmallT
 
 function LatestDealsShowcase() {
   const [hoverBigbox, setHoverBigbox] = useState(false);
+  const [hoverTopLeftbox, setHoverTopLeftbox] = useState(false);
+  const [hoverTopRightbox, setHoverTopRightbox] = useState(false);
+  const [hoverBottomLeftbox, setHoverBottomLeftbox] = useState(false);
+  const [hoverBottomRightbox, setHoverBottomRightbox] = useState(false);
+  
 
-  const pagination = {
+  const pagination = { 
     clickable: true,
     renderBullet: function (index, className) {
       const buttonName = [
@@ -86,7 +91,7 @@ function LatestDealsShowcase() {
         pagination={pagination}
         modules={[Pagination]}
       >
-        <SwiperSlide>
+        <SwiperSlide>   
           <div className="swiper-container">
             <div
               className="big-box"
@@ -120,20 +125,92 @@ function LatestDealsShowcase() {
                 </button>
               </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverTopLeftbox(true)}
+              onMouseLeave={() => setHoverTopLeftbox(false)}>
               <img src={newInTopLeft} alt="samsung TV trade up" />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Get up to £600 off a new TV</h1>
+                <p
+                  className={
+                    hoverTopLeftbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  When you recycle your old one for free
+                </p>
+                <button
+                  className={
+                    hoverTopLeftbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverBottomLeftbox(true)}
+              onMouseLeave={() => setHoverBottomLeftbox(false)}>
               <img
                 src={newInBottomLeft}
                 alt="samsung trade up household appliances"
               />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Up to £200 off selected new home appliances</h1>
+                <p
+                  className={
+                    hoverBottomLeftbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  When you recycle your old one for free
+                </p>
+                <button
+                  className={
+                    hoverBottomLeftbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverTopRightbox(true)}
+              onMouseLeave={() => setHoverTopRightbox(false)}>
               <img src={newInTopRight} alt="samsung s23ultra series" />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Get up to £750 off S23 Ultra</h1>
+                <p
+                  className={
+                    hoverTopRightbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  when you trade in and use code S23BOOST
+                </p>
+                <button
+                  className={
+                    hoverTopRightbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverBottomRightbox(true)}
+              onMouseLeave={() => setHoverBottomRightbox(false)}>
               <img src={newInBottomRight} alt="samsung book pro 3" />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Get free Galaxy Buds2 Pro (worth £219) </h1>
+                <p
+                  className={
+                    hoverBottomRightbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  Get £100 off when you recycle your old laptop
+                </p>
+                <button
+                  className={
+                    hoverBottomRightbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
           </div>
         </SwiperSlide>
@@ -169,25 +246,97 @@ function LatestDealsShowcase() {
                 </button>
               </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverTopLeftbox(true)}
+              onMouseLeave={() => setHoverTopLeftbox(false)}>
               <img src={mobileTopLeft} alt="samsung phones" />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Get £100 off the new S23 and S23+</h1>
+                <p
+                  className={
+                    hoverTopLeftbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  with code S23SAVE
+                </p>
+                <button
+                  className={
+                    hoverTopLeftbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverBottomLeftbox(true)}
+              onMouseLeave={() => setHoverBottomLeftbox(false)}>
               <img src={mobileBottomLeft} alt="samsung tablet" />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Enjoy a guaranteed £150 off the Tab S8 and S7 FE</h1>
+                <p
+                  className={
+                    hoverBottomLeftbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  When you trade in any tablet
+                </p>
+                <button
+                  className={
+                    hoverBottomLeftbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverTopRightbox(true)}
+              onMouseLeave={() => setHoverTopRightbox(false)}>
               <img
                 className="mobile-scale-picture"
                 src={mobileTopRight}
                 alt="samsung Z flip phone"
               />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Enjoy a guaranteed £150 off Galaxy Z Flip4</h1>
+                <p
+                  className={
+                    hoverTopRightbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  When you trade in any smartphone
+                </p>
+                <button
+                  className={
+                    hoverTopRightbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverBottomRightbox(true)}
+              onMouseLeave={() => setHoverBottomRightbox(false)}>
               <img
                 className="mobile-scale-picture"
                 src={mobileBottomRight}
                 alt="samsung phone"
               />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Enjoy a guaranteed £150 off Galaxy Z Fold4</h1>
+                <p
+                  className={
+                    hoverBottomRightbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  When you trade in any smartphone
+                </p>
+                <button
+                  className={
+                    hoverBottomRightbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
           </div>
         </SwiperSlide>
@@ -214,17 +363,89 @@ function LatestDealsShowcase() {
                 </button>
               </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverTopLeftbox(true)}
+              onMouseLeave={() => setHoverTopLeftbox(false)}>
               <img src={tvTopLeft} alt="samsung tv" />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Get up to £600 off a new TV</h1>
+                <p
+                  className={
+                    hoverTopLeftbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  When you recycle your old TV for free⁵
+                </p>
+                <button
+                  className={
+                    hoverTopLeftbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverBottomLeftbox(true)}
+              onMouseLeave={() => setHoverBottomLeftbox(false)}>
               <img src={tvTopRight} alt="samsung tv" />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Claim a free Galaxy Z Fold4 or Galaxy S22</h1>
+                <p
+                  className={
+                    hoverBottomLeftbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  When you buy selected 8K TVs
+                </p>
+                <button
+                  className={
+                    hoverBottomLeftbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverTopRightbox(true)}
+              onMouseLeave={() => setHoverTopRightbox(false)}>
               <img src={tvBottomLeft} alt="samsung tv" />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Get a free soundbar</h1>
+                <p
+                  className={
+                    hoverTopRightbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  When you buy selected Frame & Serif TVs
+                </p>
+                <button
+                  className={
+                    hoverTopRightbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverBottomRightbox(true)}
+              onMouseLeave={() => setHoverBottomRightbox(false)}>
               <img src={tvBottomRight} alt="samsung tv" />
+              <div className="small-box-text-container">
+                <h1 className="mobile-small-box-title-bottom-right">Get a free Smart Start package worth over £160</h1>
+                <p
+                  className={
+                    hoverBottomRightbox ? "mobile-small-box-subtitle-hide-bottom-right" : "mobile-small-box-subtitle-bottom-right"
+                  }
+                >
+                 When you buy selected TVs
+                </p>
+                <button
+                  className={
+                    hoverBottomRightbox ? "mobile-cta-button-show-bottom-right" : "mobile-cta-button-hide-bottom-right"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
           </div>
         </SwiperSlide>
@@ -251,17 +472,89 @@ function LatestDealsShowcase() {
                 </button>
               </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverTopLeftbox(true)}
+              onMouseLeave={() => setHoverTopLeftbox(false)}>
               <img src={homeTopLeft} alt="samsung fridge" />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Up to £540 off selected Fridge Freezers</h1>
+                <p
+                  className={
+                    hoverTopLeftbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  Finance options available
+                </p>
+                <button
+                  className={
+                    hoverTopLeftbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverBottomLeftbox(true)}
+              onMouseLeave={() => setHoverBottomLeftbox(false)}>
               <img src={homeTopRight} alt="samsung washing machine" />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Up to £120 off selected Washing Machines</h1>
+                <p
+                  className={
+                    hoverBottomLeftbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  5-year warranty available on selected appliances
+                </p>
+                <button
+                  className={
+                    hoverBottomLeftbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverTopRightbox(true)}
+              onMouseLeave={() => setHoverTopRightbox(false)}>
               <img src={homeBottomLeft} alt="fridge and washing machine" />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Save 20% when you buy 3 selected appliances</h1>
+                <p
+                  className={
+                    hoverTopRightbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  Or 15% when you buy two
+                </p>
+                <button
+                  className={
+                    hoverTopRightbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverBottomRightbox(true)}
+              onMouseLeave={() => setHoverBottomRightbox(false)}>
               <img src={homeBottomRight} alt="samsung vacuum cleaner" />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Up to £300 off selected vacuum cleaners</h1>
+                <p
+                  className={
+                    hoverBottomRightbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  Free delivery available in mainland UK.
+                </p>
+                <button
+                  className={
+                    hoverBottomRightbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
           </div>
         </SwiperSlide>
@@ -288,17 +581,89 @@ function LatestDealsShowcase() {
                 </button>
               </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverTopLeftbox(true)}
+              onMouseLeave={() => setHoverTopLeftbox(false)}>
               <img src={laptopTopLeft} alt="laptop" />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Save 10% on the new Galaxy Book3 Series</h1>
+                <p
+                  className={
+                    hoverTopLeftbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                 When bought together with selected Galaxy products
+                </p>
+                <button
+                  className={
+                    hoverTopLeftbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverBottomLeftbox(true)}
+              onMouseLeave={() => setHoverBottomLeftbox(false)}>
               <img src={laptopTopRight} alt="laptop" />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">New Odyssey Neo G7 gaming monitor</h1>
+                <p
+                  className={
+                    hoverBottomLeftbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  Pre order now and get a free 1TB portable SSD worth £134
+                </p>
+                <button
+                  className={
+                    hoverBottomLeftbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverTopRightbox(true)}
+              onMouseLeave={() => setHoverTopRightbox(false)}>
               <img src={laptopBottomLeft} alt="pc monitor" />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Galaxy Book3 Ultra</h1>
+                <p
+                  className={
+                    hoverTopRightbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  Get £150 off when you recycle your old laptop
+                </p>
+                <button
+                  className={
+                    hoverTopRightbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
-            <div className="small-box">
+            <div className="small-box" onMouseEnter={() => setHoverBottomRightbox(true)}
+              onMouseLeave={() => setHoverBottomRightbox(false)}>
               <img src={laptopBottomRight} alt="pc monitor" />
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Get up to £200 off a new monitor</h1>
+                <p
+                  className={
+                    hoverBottomRightbox ? "small-box-subtitle-hide" : "small-box-subtitle"
+                  }
+                >
+                  When you recycle your old one for free
+                </p>
+                <button
+                  className={
+                    hoverBottomRightbox ? "cta-button-show" : "cta-button-hide"
+                  }
+                >
+                  Buy now
+                </button>
+              </div>
             </div>
           </div>
         </SwiperSlide>
