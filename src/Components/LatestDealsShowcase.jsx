@@ -215,7 +215,7 @@ function LatestDealsShowcase() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="swiper-container">
+          <div className="swiper-container mobile">
             <div
               className="big-box"
               onMouseEnter={() => setHoverBigbox(true)}
@@ -291,7 +291,7 @@ function LatestDealsShowcase() {
             <div className="small-box" onMouseEnter={() => setHoverTopRightbox(true)}
               onMouseLeave={() => setHoverTopRightbox(false)}>
               <img
-                className="mobile-scale-picture"
+                className="mobile-scale-picture top-right"
                 src={mobileTopRight}
                 alt="samsung Z flip phone"
               />
@@ -316,7 +316,7 @@ function LatestDealsShowcase() {
             <div className="small-box" onMouseEnter={() => setHoverBottomRightbox(true)}
               onMouseLeave={() => setHoverBottomRightbox(false)}>
               <img
-                className="mobile-scale-picture"
+                className="mobile-scale-picture bottom-right"
                 src={mobileBottomRight}
                 alt="samsung phone"
               />
@@ -429,7 +429,7 @@ function LatestDealsShowcase() {
             <div className="small-box" onMouseEnter={() => setHoverBottomRightbox(true)}
               onMouseLeave={() => setHoverBottomRightbox(false)}>
               <img src={tvBottomRight} alt="samsung tv" />
-              <div className="small-box-text-container">
+              <div className="small-box-text-container bottom-right">
                 <h1 className="mobile-small-box-title-bottom-right">Get a free Smart Start package worth over £160</h1>
                 <p
                   className={
@@ -605,7 +605,7 @@ function LatestDealsShowcase() {
             <div className="small-box" onMouseEnter={() => setHoverBottomLeftbox(true)}
               onMouseLeave={() => setHoverBottomLeftbox(false)}>
               <img src={laptopTopRight} alt="laptop" />
-              <div className="small-box-text-container">
+              <div className="small-box-text-container laptop-bottom-left">
                 <h1 className="small-box-title">New Odyssey Neo G7 gaming monitor</h1>
                 <p
                   className={

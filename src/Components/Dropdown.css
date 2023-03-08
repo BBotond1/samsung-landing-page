@@ -3,7 +3,7 @@
   height: 100%;
   position: fixed;
   top: 1px;
-  right: 1px;
+  right: 0px;
   background-color: rgb(255, 255, 255);
   overflow-y: auto;
   z-index: 2;
