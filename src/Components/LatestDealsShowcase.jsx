@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./LatestDealsShowcase.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -342,9 +342,9 @@ function LatestDealsShowcase() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-container">
-            <div className="big-box" onMouseEnter={() => setHoverBigbox(true)}
+            <div className="big-box tv" onMouseEnter={() => setHoverBigbox(true)}
               onMouseLeave={() => setHoverBigbox(false)}>
-              <img src={tvMainbox} alt="samsung tv" />
+              <img className="tv-big-box-img" src={tvMainbox} alt="samsung tv" />
               <div className="tv-big-box-text-container">
                 <h1 className="tv-big-box-title">Claim up to £300 cashback on <br/> selected TVs</h1>
                 <p
@@ -426,21 +426,21 @@ function LatestDealsShowcase() {
                 </button>
               </div>
             </div>
-            <div className="small-box" onMouseEnter={() => setHoverBottomRightbox(true)}
+            <div className="small-box tv-bottom" onMouseEnter={() => setHoverBottomRightbox(true)}
               onMouseLeave={() => setHoverBottomRightbox(false)}>
               <img src={tvBottomRight} alt="samsung tv" />
-              <div className="small-box-text-container bottom-right">
-                <h1 className="mobile-small-box-title-bottom-right">Get a free Smart Start package worth over £160</h1>
+              <div className="small-box-text-container">
+                <h1 className="small-box-title">Get a free Smart Start package worth over £160</h1>
                 <p
                   className={
-                    hoverBottomRightbox ? "mobile-small-box-subtitle-hide-bottom-right" : "mobile-small-box-subtitle-bottom-right"
+                    hoverBottomRightbox ? "small-box-subtitle-hide" : "small-box-subtitle"
                   }
                 >
                  When you buy selected TVs
                 </p>
                 <button
                   className={
-                    hoverBottomRightbox ? "mobile-cta-button-show-bottom-right" : "mobile-cta-button-hide-bottom-right"
+                    hoverBottomRightbox ? "cta-button-show" : "cta-button-hide"
                   }
                 >
                   Buy now
@@ -451,7 +451,7 @@ function LatestDealsShowcase() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-container">
-            <div className="big-box" onMouseEnter={() => setHoverBigbox(true)}
+            <div className="big-box home" onMouseEnter={() => setHoverBigbox(true)}
               onMouseLeave={() => setHoverBigbox(false)}>
               <img src={homeMainbox} alt="fridge and washing machine" />
               <div className="home-big-box-text-container">
@@ -560,7 +560,7 @@ function LatestDealsShowcase() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-container">
-            <div className="big-box" onMouseEnter={() => setHoverBigbox(true)}
+            <div className="big-box laptop" onMouseEnter={() => setHoverBigbox(true)}
               onMouseLeave={() => setHoverBigbox(false)}>
               <img src={laptopMainbox} alt="laptop" />
               <div className="laptop-big-box-text-container">
