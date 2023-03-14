@@ -22,9 +22,9 @@ function Header() {
   return (
     <nav>
       <div className="logo">
-        <a href="https://www.samsung.com/">
+        <div>
           <img src={svgLogo} alt="samsung logo" />
-        </a>
+        </div>
       </div>
       <div className="buttons">
         <div className="left-buttons">

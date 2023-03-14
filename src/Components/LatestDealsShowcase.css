@@ -745,10 +745,6 @@ img.mobile-scale-picture {
   .small-box-text-container.laptop-bottom-left {
     top: 61%;
   }
-
-  .newIn-cta-button-show {
-
-  }
 }
 
 @media all and (max-width: 535px) {
@@ -797,7 +793,7 @@ img.mobile-scale-picture {
   }
 
   #buttons-div::-webkit-scrollbar{
-    display: none;
+    /* display: none; */
   }
 
   .big-box {
@@ -928,7 +924,7 @@ img.mobile-scale-picture {
 
   .small-box-text-container {
     top: 64%;
-    padding: 0 7px;
+    padding: 0 10px;
     line-height: 1.5
   }
 
@@ -1123,7 +1119,7 @@ img.mobile-scale-picture {
   .laptop-big-box-text-container {
     line-height: 1.8;
     position: absolute;
-    right: 1%;
+    right: 4%;
     top: 27%;
     width: 44%;
     display: flex;
